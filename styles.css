@@ -1,0 +1,54 @@
+/* Light theme (default) */
+
+/* Fill the row itself and every cell with the same color so there are no
+   darker gaps/lines between columns. */
+tr.gsrh-starred-row,
+tr.gsrh-starred-row > td {
+  background-color: #fdf3d3 !important;
+  background-image: none !important;
+}
+
+/* Accent bar only on the left edge of the whole row (first cell), not on
+   every column. */
+tr.gsrh-starred-row > td:first-child {
+  box-shadow: inset 3px 0 0 #fbbc04 !important;
+}
+
+tr.gsrh-starred-row:hover,
+tr.gsrh-starred-row:hover > td {
+  background-color: #fcecb8 !important;
+}
+
+/* Gmail "selected" row classes get a slightly stronger tint so the highlight
+   stays visible on top of Gmail's own selection styling. */
+tr.gsrh-starred-row.zE,
+tr.gsrh-starred-row.zE > td,
+tr.gsrh-starred-row.x7,
+tr.gsrh-starred-row.x7 > td {
+  background-color: #fbe7a8 !important;
+}
+
+/* Dark theme: a warmer, brighter overlay reads better on dark backgrounds. */
+@media (prefers-color-scheme: dark) {
+  tr.gsrh-starred-row,
+  tr.gsrh-starred-row > td {
+    background-color: #3a3320 !important;
+    background-image: none !important;
+  }
+
+  tr.gsrh-starred-row > td:first-child {
+    box-shadow: inset 3px 0 0 #ffd166 !important;
+  }
+
+  tr.gsrh-starred-row:hover,
+  tr.gsrh-starred-row:hover > td {
+    background-color: #463d24 !important;
+  }
+
+  tr.gsrh-starred-row.zE,
+  tr.gsrh-starred-row.zE > td,
+  tr.gsrh-starred-row.x7,
+  tr.gsrh-starred-row.x7 > td {
+    background-color: #4f4528 !important;
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Gmail Star Row Highlight",
+  "version": "1.0.0",
+  "description": "Highlights the entire email row when you star it in Gmail.",
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
